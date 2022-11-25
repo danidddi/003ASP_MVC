@@ -1,0 +1,65 @@
+﻿@model IEnumerable<LibraryApp.Models.Book>
+@{
+    ViewData["Title"] = "Библиотека";
+}
+
+
+<nav class="d-flex mb-5">
+
+    <!--выпадающий список добавления записи-->
+    <div class="btn-group ms-1">
+
+        <a asp-action="Add" class="btn btn-outline-dark">Добавить...</a>
+
+        <!--выпадающий список сортировок-->
+        <div class="btn-group">
+            <button type="button" class="btn btn-outline-dark dropdown-toggle"
+                    data-bs-toggle="dropdown">
+                Сортировать:
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item btn btn-outline-dark" asp-action="SortByAuthor">по автору</a>
+                <a class="dropdown-item btn btn-outline-dark" asp-action="SortByYear">по году издания</a>
+            </div>
+        </div>
+
+        <!--выпадающий список выборки-->
+        <div class="btn-group">
+            <button type="button" class="btn btn-outline-dark dropdown-toggle"
+                    data-bs-toggle="dropdown">
+                Показать:
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item btn btn-outline-dark" asp-action="ShowNew">самые новые</a>
+                <a class="dropdown-item btn btn-outline-dark" asp-action="ShowOld">самые старые</a>
+            </div>
+        </div>
+
+        <a asp-action="MaxAmount" class="btn btn-outline-dark">Больше всего экземпляров</a>
+
+        <a asp-action="Index" class="btn btn-outline-dark">Сбросить</a>
+
+    </div>
+    
+</nav>
+
+<div class="row">
+
+    @foreach (var item in @Model)
+    {
+        <div class="card-wrap col-md-auto mb-4">
+            <div class="card-item">
+                <img class="cover" src="~/img/covers/@item.Cover">
+                <div class="card-buttons d-flex flex-column justify-content-center align-items-center">
+                    <a href="" class="btn btn-outline-success w-50 mb-2">В корзину</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" asp-routed-data-="" class="btn btn-outline-danger w-50">Удалить</a>
+                </div>
+            </div>
+            <div class="card-title">
+                <a href="">@item.Name</a>
+                <p class="card-author">@item.Author</p>
+                <span class="card-price">₽@item.Cost</span>
+            </div>
+        </div>
+    }
+</div>

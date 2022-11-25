@@ -1,0 +1,65 @@
+[
+  {
+    "Id": 1,
+    "Author": "Артур Конан Доил",
+    "Name": "Шерлок Холмс",
+    "YearOfPublication": 2022,
+    "Amount": 1,
+    "Cost": 2000,
+    "Cover": "sherlock.jpg"
+  },
+  {
+    "Id": 2,
+    "Author": "Дэн Браун",
+    "Name": "Код Да Винчи",
+    "YearOfPublication": 2021,
+    "Amount": 5,
+    "Cost": 2500,
+    "Cover": "code.jpg"
+  },
+  {
+    "Id": 3,
+    "Author": "Агата Кристи",
+    "Name": "Десять негритят",
+    "YearOfPublication": 2020,
+    "Amount": 3,
+    "Cost": 2100,
+    "Cover": "ten.jpg"
+  },
+  {
+    "Id": 4,
+    "Author": "Оскар Уайльд",
+    "Name": "Портрет Дориана Грея",
+    "YearOfPublication": 2022,
+    "Amount": 3,
+    "Cost": 1900,
+    "Cover": "dorian.jpg"
+  },
+  {
+    "Id": 5,
+    "Author": "Даниель Дефо",
+    "Name": "Робинзон Крузо",
+    "YearOfPublication": 2018,
+    "Amount": 6,
+    "Cost": 2600,
+    "Cover": "cruzo.jpg"
+  },
+  {
+    "Id": 6,
+    "Author": "Дэн Браун",
+    "Name": "Утраченный символ",
+    "YearOfPublication": 2018,
+    "Amount": 32,
+    "Cost": 2500,
+    "Cover": "simvol.jpg"
+  },
+  {
+    "Id": 6,
+    "Author": "Дэн Браун",
+    "Name": "Утраченный символ",
+    "YearOfPublication": 2019,
+    "Amount": 32,
+    "Cost": 2500,
+    "Cover": "simvol.jpg"
+  }
+]
